@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Đăng kí tài khoản</title>
+	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../CSS/styleDangKiTaiKhoan.css">
+	<script type="text/javascript" src="../JS/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../JSpopper.min.js"></script>
+	<script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../JS/javaS.js"></script>
+	<link rel="stylesheet" href="../themify-icons/themify-icons.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+		integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="headerMenu" action="index">
+		<div class="menu">
+			<img style="padding: 7px;" src="../img/s04.png" alt="">
+			<ul>
+				<li><a href="/" data-url="">HOME</a></li>
+				<li><a href="" data-url="">SẢN PHẨM</a>
+					<ul class="menuCon">
+						<li><a href="xemay" class="loadContent" data-url="xemay">Xe máy</a></li>
+						<li><a href="phukien" class="loadContent" data-url="phukien">Phụ kiện</a></li>
+					</ul>
+				</li>
+				<li><a href="baohanh" class="loadContent" data-url="baohanh">BẢO HÀNH</a></li>
+				<li><a href=" " data-url="">ABOUT US</a>
+					<ul class="menuCon">
+						<li><a href="sitemap" class="loadContent" data-url="sitemap">Sitemap</a></li>
+						<li><a href="gioithieu" class="loadContent" data-url="lienHe">GIỚI THIỆU</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<form method="get" action="http://www.google.com/cse" target="_blank">
+			<div class="search">
+				<input type="hidden" name="cx" value="004904461424527752354:gzt39ubicru">
+				<input type="hidden" name="ie" value="UTF-8">
+				<input type="text" name="q" value="" placeholder="Tìm kiếm...">
+				<input type="submit" value="Search">
+			</div>
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"
+				style=" float: right;border-radius: 10px;background-color: rgb(96, 182, 206);padding: 9px;">
+				<i class="ti-user"></i> Đăng nhập
+			</button>
+		</form>
+	</div>
+
+	<div class="content">
+		<form name="form1" method="post" action="/signup/dk">
+			<h1 align="center">ĐĂNG KÍ TÀI KHOẢN</h1>
+			<div class="row">
+				<label for="textDN" class="title"> Tên đăng nhập</label>
+				<input id="textDN" type="text" name="textDN" onblur="KiemtraDN()" size="45"
+					placeholder="Chỉ nhập vào tên" />
+				<span id="tendn">*</span>
+			</div>
+
+			<div class="row">
+				<label for="textpw" class="title"> Mật khẩu</label>
+				<input id="textpw" onblur="kiemtrapassword()" type="password" name="textpw" size="45"
+					placeholder="Nhập vào mật khẩu" />
+				<span id="tenpw">*</span>
+			</div>
+
+
+			<div class="row">
+				<label for="textpwc" class="title"> Nhập lại mật khẩu</label>
+				<input id="textpwc" onblur="kiemtrapasswordNhaplai()" type="password" name="textpwc" size="45"
+					placeholder="Nhập vào xác nhận mật khẩu" />
+				<span id="tenpwc">*</span>
+			</div>
+
+			<h1 align="center">THÔNG TIN CÁ NHÂN</h1>
+
+			<div class="row">
+				<label for="hoten" class="title"> Họ và tên</label>
+				<input id="hoten" type="text" name="hoten" size="45" placeholder="Nhập vào họ tên ( bắt buộc nhập )" />
+				<span id="hoten">* bắt buộc</span>
+			</div>
+
+			<div class="row">
+				<label for="Ngaysinh" class="title">Ngày sinh:</label>
+				<input id="date" type="date" onblur="kiemtraNgaysinh()" name="Ngaysinh" size="40" placeholder="hoten" />
+				<span id="textNhaynh">*</span>
+			</div>
+
+			<div class="row">
+				<div class="radio-button">
+					<label for="gender" class="title">Giới tính:</label>
+					<input type="radio" name="gender" id="male" value="M" checked />
+					<label for="male">Nam</label>
+					<input type="radio" name="gender" id="Female" value="F" />
+					<label for="Female">Nu</label>
+				</div>
+
+			</div>
+
+			<div class="row">
+				<label for="dc" class="title">Địa chỉ</label>
+				<input id="dc" type="text" name="dc" size="45" placeholder="Nhập vào địa chỉ" />
+				<span id="dc">* bắt buộc</span>
+			</div>
+			<div class="row">
+				<label for="phone" class="title">Điện thoại</label>
+				<input id="phone" type="text" name="phone" placeholder="Nhập vào vào số điện thoại (9-10 số)" />
+			</div>
+			<div class="row">
+				<label for="txtEmail" class="title">Email:</label>
+				<input type="text" id="txtEmail" name="txtEmail" size="45"
+					placeholder="Nhập vào email cá nhân theo dạng tên @tencongty.com" />
+			</div>
+			<div class="form_submit">
+				<button class="rgister">Đăng kí</button>
+				<button class="rgister">Hủy</button>
+			</div>
+		</form>
+	</div>
+	<footer>
+		<div class="ft_container">
+			<div class="mgt lienhe">
+				<h2>Call Us</h2><br>
+				<a href="">
+					+6-345-6789-123
+				</a><br><br>
+				<h2>Email</h2><br>
+				<a href="">dot048209@gamil.com</a>
+			</div>
+			<div class="mgt aboutus">
+				<h2>About Us</h2><br>
+				<a href="">Our story</a><br><br>
+				<a href="">Working With Us</a><br><br>
+				<a href="">Be Our Partner</a>
+			</div>
+			<div class="mgt sup">
+				<h2>Support</h2><br>
+				<a href="">Customer Support</a><br><br>
+				<a href="">Privacy & Policy</a><br><br>
+				<a href="">Contact Channels</a>
+			</div>
+			<div class="mgt members">
+				<h2>Members</h2><br>
+				<address style="color: white;">
+					20009931-Nguyễn Hoàng Thái <br><br>
+					<div class="icon">
+						<a href="https://www.facebook.com/"><i class="ti-facebook"></i></a>
+						<a
+							href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoidmkifQ%3D%3D%22%7D"><i
+								class="ti-twitter-alt"></i></a>
+						<a href="https://www.instagram.com/accounts/login/"><i class="ti-instagram"></i></a>
+						<a href="https://www.youtube.com/"><i class="ti-youtube"></i></a>
+					</div>
+				</address>
+			</div>
+		</div>
+	</footer>
+
+	<!-- phần đăng nhập tài khoản -->
+	<div class="modal" id="myModal">
+		<div class="butdangNhap">
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			<div class="headerDN">
+				<p>ĐĂNG NHẬP TÀI KHOẢN</p>
+			</div>
+			<div class="dangNhapCenter">
+				<form class="formDN" action="/signin">
+					<input type="text" name="email" id="" style="width: 65%;padding:7px 7px 7px 15px;"
+						placeholder="Nhập email">
+					<input type="password" name="pass" id="" style="width: 65%;padding: 7px 7px 7px 15px;"
+						placeholder="Password">
+					<div class="khungDN">
+						<button style="margin-top: 10px;">Đăng nhập</button>
+						<p>Đăng nhâp với : <a href=""><i class="ti-google"></i></a> ,<a href=""><i
+									class="ti-facebook"></i></a></p>
+						<p>Chưa có tài khoản? <a href="signup">Đăng kí</a></p>
+					</div>
+				</form>
+
+			</div>
+			<div class="footerDN">
+				<a href="#">Forgot Password?</a>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		function KiemtraDN() {
+			var checkkytu = /^[A-Za-z]$/
+			if (checkkytu.test(document.querySelector("#textDN").value.trim()) == false) {
+
+				document.getElementById('tendn').innerHTML = "* Tên phải bắt đầu bằng kí tự"
+				return false;
+			}
+			else {
+				document.getElementById('tendn').innerHTML = "*"
+				return true;
+			}
+		}
+
+		function kiemtrapassword() {
+			const mk = document.querySelector("#tenpw");
+			var checkpassword = /(?=.*\d).{6,}/
+			if (checkpassword.test(document.querySelector("#textpw").value.trim()) == false) {
+				mk.innerHTML = '*Phải có ít nhất 6 kí tự'
+
+				return false;
+			}
+			else {
+				mk.innerHTML = '*'
+				return true;
+			}
+		}
+		function kiemtrapasswordNhaplai() {
+			const tenpwc = document.querySelector("#tenpwc");
+
+			if (document.querySelector("#textpwc").value != document.querySelector("#textpw").value) {
+
+				tenpwc.innerHTML = "* Password nhập lại không chính xác";
+				return false;
+			}
+			else {
+				tenpwc.innerHTML = "*";
+				return true;
+			}
+		}
+
+		function kiemtraNgaysinh() {
+			var ns = new Date(document.querySelector('#date').value);
+			var today = new Date();
+			if (eval(today.getFullYear() - ns.getFullYear()) <= 10) {
+				document.getElementById('textNhaynh').innerHTML = "Tuổi > 18";
+				return false;
+			}
+			else {
+				document.getElementById('textNhaynh').innerHTML = "";
+				return true;
+			}
+		}
+
+	</script>
+</body>
+
+</html>

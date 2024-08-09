@@ -1,0 +1,459 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/* ------------------------phần header menu --------------------------- */
+.headerMenu {
+	width: 100%;
+	background-color: black;
+	position: fixed;
+	height: 88px;
+	z-index: 1;
+	/*cho menu không bị lỗi khi kéo chuột */
+	top: 0px;
+}
+
+.menu img {
+	width: 11%;
+	height: 70px;
+	float: left;
+	margin-top: 8px;
+	margin-left: 10px;
+}
+
+.menu {
+	width: 65%;
+	height: 84px;
+	padding-left: 0;
+}
+
+.menu li {
+	display: flex;
+	margin-left: 5px;
+	line-height: 84px;
+	border-radius: 10px;
+}
+
+.menu ul {
+	padding: 0;
+	float: left;
+}
+
+.menu>ul>li {
+	display: inline-block;
+}
+
+.menu a {
+	text-decoration: none;
+	font-size: 25px;
+	top: 10px;
+	padding: 0 15px;
+	color: white;
+	font-weight: bold;
+}
+
+.menu li:hover,
+.menu li a:hover {
+	color: red;
+}
+
+.headerMenu>form {
+	width: 35%;
+	top: 20px;
+	position: absolute;
+	right: 0;
+	font-size: 15px;
+	margin-right: 15px;
+}
+
+form .dangNhap {
+	right: 15px;
+	position: absolute;
+}
+
+form .search {
+	right: 130px;
+	top: 9px;
+	position: absolute;
+}
+
+form .inputSearch {
+	right: 200px;
+	position: absolute;
+	padding: 5px;
+}
+
+.menuCon {
+	display: none;
+	margin-left: -15px;
+	position: absolute;
+	clear: both;
+	background-color: black;
+}
+
+.menu li:hover .menuCon {
+	display: block;
+	clear: both;
+}
+
+.footer {
+	background-color: #333;
+}
+
+.ft_container {
+	width: 1200px;
+	max-width: 100%;
+	margin: 0 auto;
+	display: flex;
+	padding: 15px;
+	justify-content: space-between;
+}
+
+footer {
+	background-color: #333;
+	display: block;
+	position: relative;
+	top: 40px;
+
+}
+
+.custom-banner {
+	position: relative;
+	width: 100%;
+	height: 40px;
+	/* Điều chỉnh chiều cao theo ý muốn */
+	background: #fff;
+	border-bottom: 2px solid red;
+	display: flex;
+	align-items: center;
+	padding: 0 15px;
+}
+
+.custom-banner::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 250px;
+	/* Điều chỉnh chiều rộng theo ý muốn */
+	background-color: #e32f2f;
+	clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
+}
+
+.custom-banner span:first-child {
+	position: relative;
+	z-index: 1;
+	color: #fff;
+	font-weight: bold;
+}
+
+.custom-banner span:last-child {
+	margin-left: auto;
+	position: relative;
+	z-index: 1;
+}
+
+.custom-banner a {
+	text-decoration: none;
+	color: #000;
+	/* Điều chỉnh màu sắc liên kết theo ý muốn */
+}
+
+.footer {
+	color: #fff;
+}
+
+.ft_container a {
+	color: #fff;
+}
+
+.ft_container h2 {
+	color: tomato;
+}
+
+.lienhe {
+	margin-left: 16px;
+}
+
+.members {
+	margin-right: 16px;
+}
+
+.mgt {
+	margin-top: 16px;
+}
+
+/* - ---------------------phần căn chỉnh cách slide------------------------ */
+.khoi-slide {
+	width: 100%;
+	height: max-content;
+	position: relative;
+}
+
+img {
+	width: 100%;
+	height: 500px;
+}
+
+.cac-slide {
+	width: 100%;
+	height: 500px;
+	overflow: hidden;
+}
+
+.slide {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	opacity: 0;
+	visibility: hidden;
+	width: 100%;
+}
+
+.slide.active {
+	opacity: 1;
+	visibility: visible;
+}
+
+.nut-slide span {
+	color: red;
+	font-size: 60px;
+	opacity: 0.8;
+}
+
+.nut-slide ul {
+	position: absolute;
+	z-index: 10;
+	width: 100px;
+	bottom: 50%;
+	left: 50%;
+	z-index: 10;
+	margin-left: -50px;
+	display: flex;
+	justify-content: space-between;
+	bottom: 8px;
+}
+
+.nut-slide ul li {
+	width: 20px;
+	height: 20px;
+	background: white;
+	opacity: 0.5;
+	list-style: none;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: 0.8s;
+}
+
+/*---------------------phần di chuyển giữa các slide nút sự kiện trái phải----------------------------*/
+.bien-mat-ben-trai {
+	animation: bien-mat-ben-trai 1s forwards;
+}
+
+@-webkit-keyframes bien-mat-ben-trai {
+	from {
+		transform: translateX(0%);
+	}
+
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+.di-vao-ben-phai {
+	animation: di-vao-ben-phai 1s forwards;
+}
+
+@-webkit-keyframes di-vao-ben-phai {
+	from {
+		transform: translateX(100%);
+	}
+
+	to {
+		transform: translateX(0%);
+	}
+}
+
+/*xử lý nút prev*/
+.bien-mat-ben-phai {
+	animation: bien-mat-ben-phai 1s forwards;
+}
+
+@-webkit-keyframes bien-mat-ben-phai {
+	from {
+		transform: translateX(0%);
+	}
+
+	to {
+		transform: translateX(100%);
+	}
+}
+
+.di-vao-ben-trai {
+	animation: di-vao-ben-trai 1s forwards;
+}
+
+@-webkit-keyframes di-vao-ben-trai {
+	from {
+		transform: translateX(-100%);
+	}
+
+	to {
+		transform: translateX(0%);
+	}
+}
+
+.nut-slide ul li.active_nut {
+	opacity: 0.8;
+	margin: 10px;
+}
+
+
+/* ------------------------------------ phần khung đăng nhập --------------------------------*/
+.butdangNhap {
+	width: 500px;
+	border: 1px solid black;
+	box-shadow: 0 0 20px rgb(65, 100, 225);
+	background-color: white;
+	margin: 80px auto;
+}
+
+.headerDN {
+	width: 100%;
+	height: 60px;
+	text-align: center;
+	padding: 25px;
+	font-weight: bold;
+	font-size: 25px;
+}
+
+.dangNhapCenter {
+	width: 100%;
+}
+
+.butdangNhap .formDN {
+	padding: 20px;
+	text-align: center;
+}
+
+.butdangNhap input {
+	margin-bottom: 20px;
+	border-radius: 5px;
+}
+
+.butdangNhap>p {
+	margin: -15px 0 15px 0;
+	text-align: center;
+}
+
+.khungDN {
+	text-align: center;
+	margin-top: -20px;
+}
+
+.khungDN button {
+	font-weight: bold;
+	font-size: 20px;
+	padding: 10px;
+	background-color: aqua;
+	border: 1px solid aqua;
+	width: 60%;
+}
+
+.khungDN button:hover {
+	background-color: rgb(13, 147, 147);
+	cursor: pointer;
+}
+
+.khungDN>p {
+	margin: 15px;
+}
+
+.footerDN {
+	text-align: center;
+	padding: 15px;
+	background-color: antiquewhite;
+	color: antiquewhite;
+}
+
+.footerDN a {
+	color: rgb(179, 116, 34);
+}
+
+.formDN>i {
+	left: 15px;
+}
+
+button.close {
+	padding: 10px;
+	margin-right: 6px;
+	background-color: red;
+}
+
+/*--------------------Phần content các sản phẩm ------------------------*/
+
+.content {
+	width: 95%;
+	display: block;
+	position: relative;
+	margin: 25px auto;
+}
+
+.hearderContent {
+	width: 100%;
+	color: #fc6e83;
+}
+
+.content .row {
+	width: 100%;
+	margin: 40px auto;
+	display: flex;
+	margin: 10px auto;
+}
+
+.row .cot {
+	width: 15%;
+	border: 1px solid rgb(203, 188, 188);
+	padding: 20px 20px 0 20px;
+	margin: 15px;
+}
+
+.cot img {
+	width: 100%;
+	height: 250px;
+	margin-bottom: 5px;
+}
+
+.cot:hover {
+	transform: scale(1.1);
+}
+
+.cot {
+	transition: all 1s;
+}
+
+.cot .contentCot {
+	font-weight: bold;
+	font-size: 20px;
+	text-align: center;
+	padding: 5px;
+}
+
+.cot .contentCot .a {
+	height: 162px;
+}
+
+h5 {
+	color: red;
+	margin: 5px;
+}
+
+.icon i {
+	padding: 7px;
+}
+
+
+
+

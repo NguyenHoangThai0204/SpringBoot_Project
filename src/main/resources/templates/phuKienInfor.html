@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::Layout(~{::section})">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Thông tin sản phẩm</title>
+	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/CSS/stypeThongTinSP.css">
+	<script type="text/javascript" src="../JS/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../JSpopper.min.js"></script>
+	<script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../JS/javaS.js"></script>
+	<link rel="stylesheet" href="../themify-icons/themify-icons.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+		integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+
+<body>
+
+	<section style="height: 650px;">
+		<div class="contentHome" style="top:86px;position: relative;margin: auto;width: 75%; font-size: 20px;">
+			<div class="content">
+				<div class="thongTin" style="display: flex;">
+					<div class="hinhAnh" style="width: 60%;">
+						<img th:src="@{${chiTietXe.image}}" alt="ảnh xe">
+					</div>
+					<div class="thongTinSanPham">
+						<marquee>
+							<p th:text="${chiTietXe.tenPhuKien}"
+								style="font-size: xxx-large; font-weight: 600;color: red;"></p>
+						</marquee>
+						<b style="margin: 10px;">Loại:</b> Đang cập nhật <b style="margin: 10px;">Hãng:</b> Đang cập
+						nhật <b style="margin: 10px;">Tình trạng:</b> Còn hàng
+						<hr>
+						<h5 th:text="${chiTietXe.gia}"></h5>
+						<br>
+						<div class="chonMua">
+							<div style="display: flex;">Số lượng: <p th:text="${chiTietXe.soLuong}"
+									style="font-weight: 900; margin:-5px 0 0 10px ; font-size: 20px;"></p>
+							</div>
+							<div class="buttons_added" style="margin: 10px;">
+								<input class="minus is-form" type="button" value="-">
+								<input aria-label="quantity" class="input-qty" max="100" min="1" name="" type="number"
+									value="">
+								<input class="plus is-form" type="button" value="+">
+							</div>
+						</div>
+
+						<br>
+						<b style="margin-top: 50px;">Mô tả:</b><br>
+						<input type="text" style="border: none;" value="" placeholder="Mô tả đang cập nhật:...">
+						<br>
+						<a th:href="@{|/addCart?id=${chiTietXe.id}&price=${chiTietXe.gia}&soluong=${quantity}|}"
+							id="them" class="them" style="margin: 30px 0; font-size: 30px;">
+							<i class="ti-shopping-cart-full"></i>
+							Thêm vào giỏ hàng
+						</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+</body>
+
+</html>

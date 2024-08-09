@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::Layout(~{::section})">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Thông tin sản phẩm</title>
+	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/CSS/stypeThongTinSP.css">
+	<script type="text/javascript" src="../JS/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../JSpopper.min.js"></script>
+	<script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../JS/javaS.js"></script>
+	<link rel="stylesheet" href="../themify-icons/themify-icons.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+		integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+
+<body>
+
+	<section style="height: 1225px;">
+		<div class="contentHome" style="top:86px;position: relative;margin: auto;width: 75%; font-size: 20px;">
+			<div class="content">
+				<div class="thongTin" style="display: flex;">
+					<div class="hinhAnh" style="width: 60%;">
+						<img th:src="@{${chiTietXe.image}}" alt="ảnh xe">
+					</div>
+					<div class="thongTinSanPham">
+						<marquee>
+							<p th:text="${chiTietXe.phienBan}"
+								style="font-size: xxx-large; font-weight: 600;color: red;"></p>
+						</marquee>
+						<b style="margin: 10px;">Loại:</b> Đang cập nhật <b style="margin: 10px;">Hãng:</b> Đang cập
+						nhật <b style="margin: 10px;">Tình trạng:</b> Còn hàng
+						<hr>
+						<h5 th:text="${#numbers.formatCurrency(chiTietXe.gia)}"></h5>
+						<br>
+						<div class="chonMua">
+						    <div style="display: flex;">Số lượng: <p th:text="${chiTietXe.soLuong}"
+						            style="font-weight: 900; margin:-5px 0 0 10px ; font-size: 20px;"></p>
+						    </div>
+						    <div class="buttons_added" style="margin: 10px;">
+						        <input class="minus is-form" type="button" value="-" onclick="changeQuantity(-1)">
+						        <input aria-label="quantity" class="input-qty" max="100" min="1" name="quantity" id="quantity" type="number" value="1">
+						        <input class="plus is-form" type="button" value="+" onclick="changeQuantity(1)">
+						    </div>
+						</div>
+
+						<b style="margin-top: 50px;">Mô tả:</b><br>
+						<input type="text" style="border: none;" value="" placeholder="Mô tả đang cập nhật:...">
+						<br><br>
+
+						<a th:href="@{|/signin/addCart?id=${chiTietXe.maSP}&price=${chiTietXe.gia}&soluong=${quantity}|}" id="them" class="them" style="margin: 30px 0; font-size: 30px;">
+						    <i class="ti-shopping-cart-full"></i>
+						    Thêm vào giỏ hàng
+						</a>
+
+
+					</div>
+				</div>
+				<hr>
+				<div class="sanPham">
+					<h2>Thông tin sản phẩm</h2>
+					<p>Xe là một tuyệt tác của công nghệ và thiết kế trong thế giới xe máy. Với sự kế thừa từ những
+						phiên bản trước, nó không chỉ là một phương tiện giao thông mà còn là biểu tượng của tốc độ và
+						phong cách. Với màu sắc Bạc Đen, chiếc xe trở nên huyền bí và sang trọng. Bạc là biểu tượng của
+						sự tinh tế và đẳng cấp, kết hợp cùng đen tạo nên một sự kết hợp độc đáo. Mỗi đường cong và chi
+						tiết trên xe đều được làm mới và nâng cấp, tạo nên một diện mạo hiện đại và thu hút mọi ánh
+						nhìn.</p>
+					<h2>Thông số kỹ thuật</h2>
+					<ul>
+						<li>Khối lượng: 50kg</li>
+						<li>Nhiên liệu: xăng</li>
+						<li>Hệ thống đánh lửa: TCI</li>
+						<li>Hệ thống ly hợp: Ly hợp ướt đa đĩa</li>
+						<li>Kiểu hệ thống truyền lực: Bánh răng ăn khớp, 6 số</li>
+						<li>Hệ thống khởi động: Điện</li>
+						<li>Mức tiêu thụ nhiên liệu (l/100km): 2.30</li>
+						<li>Hệ thống bôi trơn: Cácte ướt</li>
+						<li>Moment cực đại: 8,44 Nm/ 5.500 vòng/ phút</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script>
+		    function changeQuantity(amount) {
+		        var input = document.getElementById('quantity');
+		        var value = parseInt(input.value) + amount;
+		        if (value < 1) value = 1;
+		        if (value > 100) value = 100;
+		        input.value = value;
+		    }
+		</script>
+	</section>
+</body>
+
+</html>

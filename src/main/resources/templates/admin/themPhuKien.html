@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Đăng kí tài khoản</title>
+	<style>
+		* {
+			margin: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			background-image: url("/img/sli02.webp");
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 100%;
+			height: 100%;
+		}
+
+		.content {
+			top: 20px;
+			margin: auto;
+			width: 60%;
+		}
+
+		.content form {
+			background-color: rgb(243, 240, 240);
+			padding: 2rem;
+			border: solid 1px gray;
+			box-shadow: 1rem 2rem 3rem rgb(240, 232, 232);
+			margin-top: 90px;
+		}
+
+		.content form .form-group {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			margin-bottom: 15px;
+		}
+
+		.content form .form-group label {
+			width: 200px;
+			text-align: left;
+			padding-right: 10px;
+			color: black;
+			font-size: 18px;
+			flex-shrink: 0;
+		}
+
+		.content form .form-group input,
+		.content form .form-group select {
+			flex: 1;
+			padding: 5px;
+			font-size: 16px;
+		}
+
+		.form_submit {
+			text-align: center;
+			padding: 10px auto 50px;
+		}
+
+		.form_submit button {
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="content">
+		<form name="form1" method="post" action="addPKDb">
+			<h1 align="center" style="margin: 5px;">THÊM PHỤ KIỆN VÀO DANH SÁCH</h1>
+
+			<div class="form-group">
+				<label for="tenPK">Tên phụ kiện:</label>
+				<input id="tenPK" type="text" name="tenPK" placeholder="Nhập tên của phụ kiện" />
+			</div>
+
+
+			<div class="form-group">
+				<label for="gia">Giá phụ kiện:</label>
+				<input id="gia" type="text" name="gia" placeholder="Nhập giá phụ kiện" />
+
+			</div>
+
+			<div class="form-group">
+				<label for="soLuong">Số lượng:</label>
+				<input id="soLuong" type="text" name="soLuong" placeholder="Nhập vào số lượng sản phẩm" />
+			</div>
+
+			<div class="form-group">
+				<label for="anhPK">Ảnh phụ kiện:</label>
+				<input type="file" id="anhPK" name="anhPK" />
+			</div>
+
+			<div class="form_submit">
+				<button type="submit" class="rgister">Thêm</button>
+				<button type="button" class="rgister">Hủy</button>
+			</div>
+		</form>
+	</div>
+</body>
+
+</html>

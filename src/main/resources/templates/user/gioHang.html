@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::Layout(~{::section})">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Giỏ hàng</title>
+</head>
+
+<body>
+	<section style="height: 570px;">
+
+		<div class="contentHome" style="top:86px;position: relative;">
+			<div style="text-align: center; ">
+				<h2 style="font-size: 45px; font-weight: 600; color: red; margin: 10px 0;">Quản lý giỏ hàng</h2>
+			</div>
+			<table style="padding: 5px; margin: auto; width: 80vw; " border="1">
+				<thead>
+					<tr style="font-size: 30px; text-align: center;">
+						<th>Nhãn hiệu</th>
+						<th>Ảnh</th>
+						<th>Xuất xứ</th>
+						<th>Danh mục</th>
+						<th>Giá xe</th>
+						<th>Phiên bản</th>
+						<th>Chức năng</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+
+						<div th:each="xe:${list}">
+							<td style="text-align: center;" th:text="${xe.nhanHieu}"></td>
+							<td style="text-align: center;">
+								<img th:src="@{'/' + ${xe.image}}" alt="ảnh xe" style="width: 100px; height: 100px;">
+							</td>
+							<td style="text-align: center;" th:text="${xe.xuatXu}"></td>
+							<td style="text-align: center;" th:text="${xe.danhMuc}"></td>
+							<td style="text-align: center;" th:text="${#numbers.formatCurrency(xe.gia)}"></td>
+							<td style="text-align: center;" th:text="${xe.phienBan}"></td>
+							<td style="text-align: center;">
+								<a th:href="@{|/deleteCart?id=${xe.maSP}|}" class="btn btn-danger">Xóa
+							</td>
+						</div>
+
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+	</section>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:insert="~{base::Layout(~{::section})}">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Trang chủ</title>
+	<!-- Thêm các liên kết và script cần thiết -->
+</head>
+
+<body>
+	<section style="height: 700px;">
+			<div class="contentHome" style="top:86px;position: relative;text-align: center;">
+				<h1>Admin</h1>
+
+				<div style="display: flex; margin: auto; width: 50vw;justify-content: space-between;">
+					<div class="addXe"
+						style="padding: 10px; margin: 15px;border: 1px solid black; display: grid; font-size: 20px; font-weight: 600;">
+						<img src="img/add.jpg" 
+							style="width: 200px; height: 200px; padding: 10px;" />
+						<a th:href="@{/signin/admin/addxe}">Thêm xe</a>
+					</div>
+					<div class="addXe"
+						style="padding: 10px; margin: 15px;border: 1px solid black; display: grid; font-size: 20px; font-weight: 600;">
+						<img src="img/add.jpg" 
+							style="width: 200px; height: 200px; padding: 10px;" />
+						<a th:href="@{/signin/admin/addpk}">Thêm phụ kiện</a>
+					</div>
+					<div class="addXe"
+						style="padding: 10px; margin: 15px;border: 1px solid black; display: grid; font-size: 20px; font-weight: 600;">
+						<img src="img/list.png" 
+							style="width: 200px; height: 200px; padding: 10px;" />
+						<a th:href="@{/signin/admin/loadXe}">Danh sách xe</a>
+					</div>
+				</div>
+				<div style="display: flex; margin: auto; width: 50vw;justify-content: space-between;">
+					<div class="addXe"
+						style="padding: 10px; margin: 15px;border: 1px solid black; display: grid; font-size: 20px; font-weight: 600;">
+						<img src="img/list.png" 
+							style="width: 200px; height: 200px; padding: 10px;" />
+						<a th:href="@{/signin/admin/loadPK}">Danh sách phụ kiện</a>
+					</div>
+					<div class="addXe"
+						style="padding: 10px; margin: 15px;border: 1px solid black; display: grid; font-size: 20px; font-weight: 600;">
+						<img src="img/bill.png" 
+							style="width: 200px; height: 200px; padding: 10px;" />
+						<a th:href="@{/admin/loadDonHang}">Đơn hàng</a>
+					</div>
+					<div class="addXe"
+						style="padding: 10px; margin: 15px;border: 1px solid black; display: grid; font-size: 20px; font-weight: 600;">
+						<img src="img/tk.png" 
+							style="width: 200px; height: 200px; padding: 10px;" />
+						<a th:href="@{/admin/thongKe}">Thống kê</a>
+					</div>
+				</div>
+
+			</div>
+		</section>
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/*--------------------Phần content các sản phẩm ------------------------*/
+
+section>.contentHome>.content>.thongTin {
+	width: 100%;
+	height: max-content;
+	display: flex;
+}
+
+.gioiThieu {
+	width: 30%;
+	float: left;
+	background-color: aqua;
+	height: 900px;
+	padding: 10px;
+}
+
+.content {
+	width: 68%;
+	display: block;
+	margin: 90px auto;
+}
+
+.hinhAnh {
+	width: 50%;
+}
+
+.thongTinSanPham {
+	width: 50%;
+	padding: 10px;
+
+}
+
+.hinhAnh img {
+	width: 100%;
+	height: 600px;
+}
+
+.thongTinSanPham p {
+	font-weight: bold;
+	font-size: 30px;
+}
+
+h5 {
+	font-size: 40px;
+	color: red;
+}
+
+.thongTinSanPham button {
+	margin-left: 10px;
+	padding: 5px;
+	margin-top: 20px;
+	border-radius: 20px 20px 20px 20px;
+	border-color: red;
+	background-color: aliceblue;
+}
+
+.thongTinSanPham .them {
+	margin-left: 80px;
+	padding: 10px;
+	margin-top: 20px;
+	border-radius: 5px 5px 5px 5px;
+	border-color: red;
+	background-color: aliceblue;
+	text-align: center;
+}
+
+.thongTinSanPham button:hover {
+	border-color: aqua;
+	background-color: aqua;
+	color: black;
+}
+
+.chonMua {
+	margin-top: 25px;
+}
+
+.thongTinSanPham input {
+	background-color: #fff;
+	border-color: black;
+}
+
+.appMuaHang img {
+	width: 30%;
+	height: 30px;
+	margin-top: 15px;
+	padding: 2px;
+	border: 1px solid grey;
+}
+
+.appMuaHang {
+	margin-top: 30px;
+}
+
+.sanPham {
+	width: 100%;
+}
+
+.sanPham p,
+.sanPham>ul>li {
+	font-size: 20px;
+}
+
+.icon {
+	text-align: center;
+}
+
+.icon i {
+	padding: 7px;
+}
+
+/* -----------------------------chọn số lượng----------------------- */
+/* <![CDATA[ */
+.buttons_added {
+	opacity: 1;
+	display: inline-block;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	white-space: nowrap;
+	vertical-align: top;
+}
+
+.is-form {
+	overflow: hidden;
+	position: relative;
+	background-color: #f9f9f9;
+	height: 2.2rem;
+	width: 1.9rem;
+	padding: 0;
+	text-shadow: 1px 1px 1px #fff;
+	border: 1px solid #ddd;
+}
+
+.is-form:focus,
+.input-text:focus {
+	outline: none;
+}
+
+.is-form.minus {
+	border-radius: 4px 0 0 4px;
+}
+
+.is-form.plus {
+	border-radius: 0 4px 4px 0;
+}
+
+.input-qty {
+	background-color: #fff;
+	height: 2.2rem;
+	text-align: center;
+	font-size: 1rem;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	border-left: 0;
+	border-right: 0;
+	padding: 0;
+}
+
+.input-qty::-webkit-outer-spin-button,
+.input-qty::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* ]]> 

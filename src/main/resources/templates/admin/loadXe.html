@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Danh sách xe</title>
+	<style>
+		* {
+			margin: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 100%;
+			height: 100%;
+		}
+
+		.content {
+			top: 20px;
+			margin: auto;
+			width: 60%;
+		}
+
+		.content form {
+			background-color: rgb(243, 240, 240);
+			padding: 2rem;
+			border: solid 1px gray;
+			box-shadow: 1rem 2rem 3rem rgb(240, 232, 232);
+			margin-top: 90px;
+		}
+
+		button {
+			font-size: 20px;
+			font-weight: 600;
+			padding: 5px;
+		}
+
+		button:hover {
+			background-color: yellow;
+			border: none;
+			transform: scale(1.1);
+		}
+
+		tr:hover {
+			background-color: silver;
+		}
+
+		input {
+			height: 100%;
+			padding: 5px;
+			text-align: center;
+			font-size: 20px;
+			width: max-content;
+			border: none;
+		}
+	</style>
+</head>
+
+<body>
+	<div style="text-align: center;">
+		<h2 style="font-size: 45px; font-weight: 600; color: red; margin: 10px 0;">Danh sách các xe</h2>
+	</div>
+	<table style="padding: 5px; margin: auto; width: 95vw;" border="1">
+		<thead>
+			<tr style="font-size: 30px; text-align: center;">
+				<th>Nhãn hiệu</th>
+				<th>Ảnh</th>
+				<th>Xuất xứ</th>
+				<th>Số lượng</th>
+				<th>Danh mục</th>
+				<th>Giá xe</th>
+				<th>Phiên bản</th>
+				<th>Chức năng</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="xe : ${list}" style="font-size: 23px;">
+				<form th:action="@{/signin/admin/updateXe}" method="post" enctype="multipart/form-data">
+					<td style="text-align: center;">
+						<input type="hidden" name="maSP" style="width: 100px;" th:value="${xe.maSP}" readonly>
+						<input type="hidden" name="thongTin" style="width: 100px;" th:value="${xe.thongTin}" readonly>
+						<input type="text" name="nhanHieu" style="width: 100px;" th:value="${xe.nhanHieu}">
+					</td>
+					<td style="text-align: center;">
+						<img th:src="@{'/' + ${xe.image}}" alt="ảnh xe" style="width: 100px; height: 100px;">
+					</td>
+					<td style="text-align: center;">
+						<input type="text" name="xuatXu" style="width: 100px;" th:value="${xe.xuatXu}">
+					</td>
+					<td style="text-align: center;">
+						<input type="text" name="soLuong" style="width: 100px;" th:value="${xe.soLuong}">
+					</td>
+					<td style="text-align: center;">
+						<input type="text" name="danhMuc" style="width: 100px;" th:value="${xe.danhMuc}">
+					</td>
+					<td style="text-align: center;">
+						<input type="text" name="gia" th:value="${xe.gia}">
+					</td>
+					<td style="text-align: center;">
+						<input type="text" style="width: 550px;" name="phienBan" th:value="${xe.phienBan}">
+					</td>
+					<td style="text-align: center;">
+						<button type="submit" class="btn btn-primary">Lưu</button>
+						<button type="button" class="btn btn-danger"><a
+								th:href="@{|/signin/admin/deleteXe?id=${xe.maSP}|}">Xóa</a></button>
+					</td>
+				</form>
+			</tr>
+		</tbody>
+	</table>
+	<script>
+		// Định dạng số
+		document.querySelectorAll('input[name="gia"]').forEach(function (element) {
+			let number = parseFloat(element.value);
+			if (!isNaN(number)) {
+				element.value = number.toLocaleString('vi-VN');
+			}
+		});
+	</script>
+</body>
+
+</html>

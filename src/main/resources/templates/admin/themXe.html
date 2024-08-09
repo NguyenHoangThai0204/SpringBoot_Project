@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Đăng kí tài khoản</title>
+	<style>
+		* {
+			margin: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			background-image: url("/img/sli02.webp");
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 100%;
+			height: 100%;
+		}
+
+		.content {
+			top: 20px;
+			margin: auto;
+			width: 60%;
+		}
+
+		.content form {
+			background-color: rgb(243, 240, 240);
+			padding: 2rem;
+			border: solid 1px gray;
+			box-shadow: 1rem 2rem 3rem rgb(240, 232, 232);
+			margin-top: 90px;
+		}
+
+		.content form .form-group {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			margin-bottom: 15px;
+		}
+
+		.content form .form-group label {
+			width: 200px;
+			text-align: left;
+			padding-right: 10px;
+			color: black;
+			font-size: 18px;
+			flex-shrink: 0;
+		}
+
+		.content form .form-group input,
+		.content form .form-group select {
+			flex: 1;
+			padding: 5px;
+			font-size: 16px;
+		}
+
+		.form_submit {
+			text-align: center;
+			padding: 10px auto 50px;
+		}
+
+		.form_submit button {
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="content">
+		<form name="form1" method="post" action="addXeDb">
+			<h1 align="center" style="margin: 5px;">THÊM XE VÀO DANH SÁCH</h1>
+
+			<div class="form-group">
+				<label for="phienBan">Phiên bản:</label>
+				<input id="phienBan" type="text" name="phienBan" placeholder="Nhập phiên bản của xe" />
+
+			</div>
+
+			<div class="form-group">
+				<label for="thongTin">Thông tin:</label>
+				<input id="thongTin" type="text" name="thongTin" placeholder="Nhập thông tin của xe" />
+
+			</div>
+
+			<div class="form-group">
+				<label>Nhãn hiệu:</label>
+				<div>
+					<input type="radio" name="nhanHieu" id="Honda" value="Honda" checked />
+					<label for="Honda">Honda</label>
+					<input type="radio" name="nhanHieu" id="Yamaha" value="Yamaha" />
+					<label for="Yamaha">Yamaha</label>
+					<input type="radio" name="nhanHieu" id="Suzuki" value="Suzuki" />
+					<label for="Suzuki">Suzuki</label>
+					<input type="radio" name="nhanHieu" id="Future" value="Future" />
+					<label for="Future">Future</label>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="xuatXu">Xuất xứ:</label>
+				<input id="xuatXu" type="text" name="xuatXu" placeholder="Nhập vào xuất xứ" />
+			</div>
+
+			<div class="form-group">
+				<label for="gia">Giá xe:</label>
+				<input id="gia" type="text" name="gia" placeholder="Nhập vào giá của xe" />
+			</div>
+
+
+			<div class="form-group">
+				<label>Danh mục:</label>
+				<div>
+					<input type="radio" name="danhMuc" id="Xe tay ga" value="Xe tay ga" checked />
+					<label for="Xe tay ga">Xe tay ga</label>
+					<input type="radio" name="danhMuc" id="Xe số" value="Xe số" />
+					<label for="Xe số">Xe số</label>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="soLuong">Số lượng:</label>
+				<input id="soLuong" type="text" name="soLuong" placeholder="Nhập vào số lượng sản phẩm" />
+			</div>
+			<div class="form-group">
+				<label for="anhXe">Ảnh xe:</label>
+				<input type="file" id="anhXe" name="anhXe" />
+			</div>
+
+			<div class="form_submit">
+				<button type="submit" class="rgister">Thêm</button>
+				<button type="button" class="rgister">Hủy</button>
+			</div>
+		</form>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+USE  baitaplon;
+
+ALTER TABLE user MODIFY id INT AUTO_INCREMENT;
+
+INSERT INTO xeproduct (masp, phien_ban, danh_muc, xuat_xu, nhan_hieu, gia, thong_tin, image, so_luong) 
+VALUES 
+('tg01', ' Honda SH Mode SH Mode 2024 Thể Thao', 'Xe tay ga', 'Việt Nam', 'Honda', 66700000, 'Xe mới xuất hiện 2024.', 'img/xetayga/hd01.png',10),
+('tg02', 'Honda SH Mode SH Mode 2024 Tiêu Chuẩn', 'Xe tay ga', 'Việt Nam', 'Honda', 58400000, 'Xe mới xuất hiện 2024.', 'img/xetayga/hd02.png',12),
+('tg03', ' Xe Máy  Honda SH160i Tiêu Chuẩn CBS (2024)', 'Xe tay ga', 'Việt Nam', 'Honda', 94000000 ,'xe mới xuất hiện 2024.', 'img/xetayga/hd03.png',12),
+('tg04', ' Xe Máy Honda Air Blade 125 (Tiêu Chuẩn)', 'Xe tay ga', 'Việt Nam', 'Honda', 42900000, 'Xe mới xuất hiện 2024.', 'img/xetayga/hd04.png',18),
+('tg05', 'Xe Yamaha Freego S 2024 Đặc Biệt ABS Màu Mới', 'Xe tay ga', 'Việt Nam', 'Yamaha', 35500000, 'Xe mới xuất hiện 2024', 'img/xetayga/ya01.png',20),
+('tg06', 'Xe Máy Yamaha Janus Phiên Bản (Tiêu Chuẩn)', 'Xe tay ga', 'Việt Nam', 'Yamaha', 24500000, 'Xe mới xuất hiện 2024.', 'img/xetayga/ya02.png',21),
+('tg07', 'Honda Air Blade 160 2025 (Thể Thao)', 'Xe tay ga', 'Việt Nam', 'Honda', 61900000, 'Xe mới xuất hiện 2024.', 'img/xetayga/hd05.png',15),
+('tg08', 'Honda Air Blade 125 2025 (Đặc Biệt)', 'Xe tay ga', 'Việt Nam', 'Honda', 45000000, 'Xe mới xuất hiện 2024.', 'img/xetayga/hd06.png',20),
+('tg09', 'Honda Vision Phiên Bản Cổ Điển Mới Nhất 2024', 'Xe tay ga', 'Việt Nam', 'Honda', 38200000 ,'xe mới xuất hiện 2024.', 'img/xetayga/hd07.png',10),
+('tg10', 'Xe Máy Honda Air Blade 125 (Tiêu Chuẩn)', 'Xe tay ga', 'Việt Nam', 'Yamaha', 38500000, 'Xe mới xuất hiện 2024.', 'img/xetayga/ya03.png',8),
+('tg11', 'Xe Máy Yamaha NVX 155 VVA THẾ HỆ II MÀU MỚI 2024', 'Xe tay ga', 'Việt Nam', 'Yamaha', 35500000, 'Xe mới xuất hiện 2024', 'img/xetayga/ya04.png',8),
+('tg12', 'Yamaha NVX 155 VVA Monster', 'Xe tay ga', 'Việt Nam', 'Yamaha', 55000000, 'Xe mới xuất hiện 2024.', 'img/xetayga/ya05.png',6),
+
+('xs01', 'Xe  Honda Future 2024 Đặc Biệt ( Phanh Đĩa - Vành Đúc)', 'Xe số', 'Việt Nam', 'Honda', 37700000, 'Xe mới xuất hiện 2024.', 'img/xeso/xs01.png',5),
+('xs02', 'Honda Future 2024 Tiêu Chuẩn (Vành Đĩa - Nan Hoa)', 'Xe số', 'Việt Nam', 'Honda', 34200000, 'Xe mới xuất hiện 2024.', 'img/xeso/xs02.png',12),
+('xs03', 'Exciter 155 ABS Giới Hạn Monster Energy Moto GP Mới Nhất 2024', 'Xe số', 'Việt Nam', 'Yamaha', 52500000, 'Xe mới xuất hiện 2024.', 'img/xeso/xs03.png',15),
+('xs04', 'Yamaha Sirius FI 2023 Phanh Đĩa', 'Xe số', 'Việt Nam', 'Yamaha', 23000000, 'Xe mới xuất hiện 2024.', 'img/xeso/xs04.png',5),
+('xs05', 'Xe Máy  Honda Wave alpha (Tiêu chuẩn)', 'Xe số', 'Việt Nam', 'Honda', 34200000, 'Xe mới xuất hiện 2024.', 'img/xeso/xs05.png',12),
+('xs06', 'Xe Máy  Honda Winner Winner X 2023 Mới (Thể thao)', 'Xe số', 'Việt Nam', 'Honda', 41000000, 'Xe mới xuất hiện 2024.', 'img/xeso/xs06.png',12),
+('xs07', 'Yamaha R15 R15 2023 Bạc Đen', 'Xe số', 'Việt Nam', 'Yamaha', 84000000, 'Xe mới xuất hiện 2024.', 'img/xeso/xs07.png',5),
+('xs08', 'SUZUKI RAIDER 150 2022 ( Nâu Đen, Xanh Đen, Trắng Đỏ Đen)', 'Xe số', 'Việt Nam', 'Suzuki', 46800000, 'Xe mới xuất hiện 2024.', 'img/xeso/xs08.png',12),
+('xs09', 'Xe Máy Yamaha Exciter 155 Phiên Bản (Giới Hạn)', 'Xe số', 'Việt Nam', 'Yamaha', 50500000, 'Xe mới xuất hiện 2024.', 'img/xeso/xs09.png',15);
+
+
